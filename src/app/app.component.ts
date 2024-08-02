@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './header/header.component';
+import { ConverterComponent } from './converter/converter.component';
+import { SharedModule } from './shared.module';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [HeaderComponent, ConverterComponent, SharedModule],
 })
-export class AppComponent {
-  title = 'currency-converter';
-}
+export class AppComponent {}
