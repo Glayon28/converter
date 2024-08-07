@@ -1,32 +1,17 @@
 <div class="currency">
-  <div class="currency__price">
-    <input
-      type="number"
-      [(ngModel)]="amount1"
-      (ngModelChange)="handleAmount1Change($event)"
-    />
-    <select
-      [(ngModel)]="currency1"
-      (ngModelChange)="handleCurrency1Change($event)"
-    >
-      <option *ngFor="let currency of rates | keyvalue" [value]="currency.key">
-        {{ currency.key }}
-      </option>
-    </select>
-  </div>
-  <div class="currency__price">
-    <input
-      type="number"
-      [(ngModel)]="amount2"
-      (ngModelChange)="handleAmount2Change($event)"
-    />
-    <select
-      [(ngModel)]="currency2"
-      (ngModelChange)="handleCurrency2Change($event)"
-    >
-      <option *ngFor="let currency of rates | keyvalue" [value]="currency.key">
-        {{ currency.key }}
-      </option>
-    </select>
-  </div>
+  <app-currency-price-input
+    [amount]="baseAmount"
+    [currency]="baseCurrency"
+    [rates]="rates"
+    (valuesChange)="handleValuesChange($event, 1)"
+  >
+  </app-currency-price-input>
+
+  <app-currency-price-input
+    [amount]="convertedAmount"
+    [currency]="convertedCurrency"
+    [rates]="rates"
+    (valuesChange)="handleValuesChange($event, 2)"
+  >
+  </app-currency-price-input>
 </div>

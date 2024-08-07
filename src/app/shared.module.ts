@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NumberFormatDirective } from './number-format.directive';
+import { NumberFormatDirective } from './directives/number-format.directive';
 
 @NgModule({
   declarations: [NumberFormatDirective],

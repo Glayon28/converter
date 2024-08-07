@@ -1,0 +1,8 @@
+<form [formGroup]="form" class="currency__price">
+  <input formControlName="amount" [(ngModel)]="amount" />
+  <select formControlName="currency">
+    <option *ngFor="let currency of rates | keyvalue" [value]="currency.key">
+      {{ currency.key }}
+    </option>
+  </select>
+</form>

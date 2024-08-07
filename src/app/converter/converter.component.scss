@@ -1,26 +1,4 @@
 .currency {
     display: flex;
     margin-top: 10px;
-
-    &__price {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 5px;
-
-        input {
-            padding: 25px 15px;
-            display: flex;
-            font-size: 20px;
-            border-radius: 5px;
-            border: 1px solid rgb(205, 215, 231);
-        }
-
-        select {
-            position: absolute;
-            margin-right: 5px;
-            padding: 8px;
-            border: 1px solid rgb(205, 215, 231);
-        }
-    }
 }
